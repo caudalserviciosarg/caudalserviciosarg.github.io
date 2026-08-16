@@ -1,3 +1,6 @@
+Sí. Reemplazá **TODO el contenido de `style.css`** por este. No agregues nada más al archivo.
+
+```css
 /* ==================================================
    CONFIGURACIÓN GENERAL
 ================================================== */
@@ -21,42 +24,55 @@ body {
     overflow-x: hidden;
 }
 
+/* Evita puntos y estilos de listas */
+ul,
+ol,
+li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+li::before,
+li::after {
+    content: none !important;
+}
+
+/* Enlaces sin subrayados ni contenido agregado */
+a {
+    text-decoration: none;
+}
+
+a::before {
+    content: none !important;
+}
+
 
 /* ==================================================
    ENCABEZADO
 ================================================== */
 
 header {
-    background:
-        linear-gradient(
-            180deg,
-            #080d10,
-            #070b0e
-        );
+    background: linear-gradient(
+        180deg,
+        #080d10,
+        #070b0e
+    );
 
     min-height: 100px;
-
     padding: 8px 5%;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 
-    border-bottom:
-        1px solid
-        rgba(32, 184, 209, 0.15);
+    border-bottom: 1px solid rgba(32, 184, 209, 0.15);
 
-    box-shadow:
-        0 6px 22px
-        rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -66,31 +82,23 @@ header {
 
 .logo {
     display: flex;
-
     align-items: center;
-
     justify-content: flex-start;
 
     height: 85px;
-
     min-width: 250px;
 
     overflow: visible;
-
     position: relative;
 }
 
 .logo img {
     width: 245px;
-
     max-width: 100%;
-
     height: auto;
-
     max-height: 82px;
 
     display: block;
-
     object-fit: contain;
 
     transition:
@@ -101,11 +109,9 @@ header {
 .logo img:hover {
     transform: scale(1.035);
 
-    filter:
-        drop-shadow(
-            0 0 12px
-            rgba(32, 184, 209, 0.18)
-        );
+    filter: drop-shadow(
+        0 0 12px rgba(32, 184, 209, 0.18)
+    );
 }
 
 
@@ -115,27 +121,24 @@ header {
 
 nav {
     display: flex;
-
     align-items: center;
-
     justify-content: flex-end;
-
     gap: 28px;
 }
 
 nav a {
     color: #e9eef0;
 
-    text-decoration: none;
-
     font-size: 15px;
-
     font-weight: bold;
 
     position: relative;
 
-    transition:
-        color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #20b8d1;
 }
 
 nav a::after {
@@ -144,28 +147,20 @@ nav a::after {
     position: absolute;
 
     left: 0;
-
     bottom: -7px;
 
     width: 0;
-
     height: 2px;
 
     border-radius: 10px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #20b8d1,
-            #ff6a00
-        );
+    background: linear-gradient(
+        90deg,
+        #20b8d1,
+        #ff6a00
+    );
 
-    transition:
-        width 0.3s ease;
-}
-
-nav a:hover {
-    color: #20b8d1;
+    transition: width 0.3s ease;
 }
 
 nav a:hover::after {
@@ -183,9 +178,7 @@ nav a:hover::after {
     position: relative;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -239,7 +232,6 @@ nav a:hover::after {
     color: #20b8d1;
 
     font-size: 13px;
-
     font-weight: bold;
 
     letter-spacing: 3px;
@@ -248,7 +240,7 @@ nav a:hover::after {
 }
 
 
-/* OCULTAR "CAUDAL SERVICIOS" DEL INICIO */
+/* Ocultar etiqueta del inicio */
 
 .principal .etiqueta {
     display: none;
@@ -303,8 +295,7 @@ nav a:hover::after {
 
     max-width: 680px;
 
-    margin:
-        0 auto 34px;
+    margin: 0 auto 34px;
 
     color: #cbd8dc;
 
@@ -330,11 +321,9 @@ nav a:hover::after {
 
 .agua-1 {
     width: 260px;
-
     height: 260px;
 
     right: -80px;
-
     top: 25%;
 
     background:
@@ -351,11 +340,9 @@ nav a:hover::after {
 
 .agua-2 {
     width: 180px;
-
     height: 180px;
 
     left: -60px;
-
     bottom: 15%;
 
     background:
@@ -410,7 +397,6 @@ nav a:hover::after {
 
 .fuego-1 {
     left: 8%;
-
     top: 25%;
 
     animation:
@@ -420,7 +406,6 @@ nav a:hover::after {
 
 .fuego-2 {
     right: 10%;
-
     bottom: 20%;
 
     animation:
@@ -467,30 +452,24 @@ nav a:hover::after {
 
     color: white;
 
-    text-decoration: none;
-
-    padding:
-        14px 28px;
+    padding: 14px 28px;
 
     border-radius: 8px;
 
     font-size: 17px;
-
     font-weight: bold;
 
     box-shadow:
         0 7px 20px
         rgba(37, 211, 102, 0.2);
 
-    transition:
-        0.3s ease;
+    transition: 0.3s ease;
 }
 
 .boton-whatsapp:hover {
     background: #1ebe5d;
 
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 10px 25px
@@ -500,8 +479,7 @@ nav a:hover::after {
 .boton-whatsapp.grande {
     font-size: 19px;
 
-    padding:
-        17px 32px;
+    padding: 17px 32px;
 }
 
 
@@ -510,8 +488,7 @@ nav a:hover::after {
 ================================================== */
 
 .seccion {
-    padding:
-        85px 7%;
+    padding: 85px 7%;
 
     text-align: center;
 
@@ -536,8 +513,7 @@ nav a:hover::after {
 .texto-seccion {
     max-width: 720px;
 
-    margin:
-        0 auto 18px;
+    margin: 0 auto 18px;
 
     font-size: 17px;
 
@@ -570,7 +546,6 @@ nav a:hover::after {
     max-width: 1150px;
 
     margin-left: auto;
-
     margin-right: auto;
 }
 
@@ -584,8 +559,7 @@ nav a:hover::after {
             #0d1215
         );
 
-    padding:
-        32px 24px;
+    padding: 32px 24px;
 
     border-radius: 14px;
 
@@ -600,8 +574,6 @@ nav a:hover::after {
 
     border-bottom:
         3px solid transparent;
-
-    text-decoration: none;
 
     color: inherit;
 
@@ -618,8 +590,7 @@ nav a:hover::after {
 }
 
 .servicio:hover {
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     border-bottom:
         3px solid #20b8d1;
@@ -639,8 +610,7 @@ nav a:hover::after {
 
     margin-bottom: 14px;
 
-    transition:
-        0.3s ease;
+    transition: 0.3s ease;
 }
 
 .servicio:hover .icono {
@@ -688,8 +658,7 @@ nav a:hover::after {
 
     font-size: 15px;
 
-    transition:
-        0.3s ease;
+    transition: 0.3s ease;
 }
 
 .servicio:hover .consultar {
@@ -722,8 +691,7 @@ nav a:hover::after {
 
     color: white;
 
-    padding:
-        90px 7%;
+    padding: 90px 7%;
 
     text-align: center;
 }
@@ -771,11 +739,9 @@ nav a:hover::after {
 .matriculado {
     max-width: 700px;
 
-    margin:
-        40px auto 0;
+    margin: 40px auto 0;
 
-    padding:
-        28px;
+    padding: 28px;
 
     background:
         linear-gradient(
@@ -824,8 +790,7 @@ nav a:hover::after {
 ================================================== */
 
 .contacto {
-    padding:
-        90px 20px;
+    padding: 90px 20px;
 
     text-align: center;
 
@@ -885,8 +850,7 @@ footer {
 
     text-align: center;
 
-    padding:
-        42px 20px 28px;
+    padding: 42px 20px 28px;
 
     border-top:
         1px solid
@@ -932,8 +896,7 @@ footer p {
             #20b8d1
         );
 
-    margin:
-        23px auto;
+    margin: 23px auto;
 }
 
 footer .copyright {
@@ -949,8 +912,7 @@ footer .copyright {
 footer .derechos {
     max-width: 650px;
 
-    margin:
-        12px auto 0;
+    margin: 12px auto 0;
 
     color: #6f7d83;
 
@@ -968,7 +930,6 @@ footer .derechos {
     position: fixed;
 
     right: 25px;
-
     bottom: 25px;
 
     display: flex;
@@ -981,10 +942,7 @@ footer .derechos {
 
     color: white;
 
-    text-decoration: none;
-
-    padding:
-        13px 19px;
+    padding: 13px 19px;
 
     border-radius: 50px;
 
@@ -998,15 +956,23 @@ footer .derechos {
 
     z-index: 9999;
 
-    transition:
-        0.3s ease;
+    transition: 0.3s ease;
 }
 
 .whatsapp-flotante:hover {
     background: #1ebe5d;
 
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
+}
+
+
+/* ==================================================
+   OCULTAR PARTÍCULAS DEL SCRIPT
+================================================== */
+
+.particula-fuego,
+.particula-agua {
+    display: none !important;
 }
 
 
@@ -1069,7 +1035,8 @@ footer .derechos {
         min-height: 590px;
 
         padding:
-            70px 20px;
+            70px
+            20px;
     }
 
     .principal h2 {
@@ -1082,7 +1049,8 @@ footer .derechos {
 
     .seccion {
         padding:
-            72px 20px;
+            72px
+            20px;
     }
 
     .seccion h2 {
@@ -1097,7 +1065,8 @@ footer .derechos {
 
     .zona {
         padding:
-            75px 20px;
+            75px
+            20px;
     }
 
     .zona h2 {
@@ -1106,7 +1075,8 @@ footer .derechos {
 
     .contacto {
         padding:
-            78px 20px;
+            78px
+            20px;
     }
 
     .contacto h2 {
@@ -1160,7 +1130,8 @@ footer .derechos {
         min-height: 550px;
 
         padding:
-            62px 20px;
+            62px
+            20px;
     }
 
     .principal h2 {
@@ -1189,7 +1160,8 @@ footer .derechos {
 
     .seccion {
         padding:
-            65px 20px;
+            65px
+            20px;
     }
 
     .seccion h2 {
@@ -1202,7 +1174,8 @@ footer .derechos {
 
     .servicio {
         padding:
-            29px 20px;
+            29px
+            20px;
     }
 
     .servicio h3 {
@@ -1215,7 +1188,8 @@ footer .derechos {
 
     .zona {
         padding:
-            68px 20px;
+            68px
+            20px;
     }
 
     .zona h2 {
@@ -1228,7 +1202,8 @@ footer .derechos {
 
     .matriculado {
         padding:
-            25px 21px;
+            25px
+            21px;
     }
 
     .matriculado h3 {
@@ -1241,7 +1216,8 @@ footer .derechos {
 
     .contacto {
         padding:
-            72px 20px;
+            72px
+            20px;
     }
 
     .contacto h2 {
@@ -1258,7 +1234,6 @@ footer .derechos {
         bottom: 15px;
 
         width: 55px;
-
         height: 55px;
 
         padding: 0;
@@ -1316,12 +1291,15 @@ footer .derechos {
 
     .servicio {
         padding:
-            28px 20px;
+            28px
+            20px;
     }
 
     footer {
         padding:
-            38px 18px 25px;
+            38px
+            18px
+            25px;
     }
 }
 
@@ -1383,3 +1361,8 @@ footer .derechos {
             0.01ms !important;
     }
 }
+```
+
+**Importante:** este reemplaza completamente tu `style.css`. No pegues el anterior debajo de este.
+
+Después de guardarlo, hacé **Ctrl + F5** en la página.
