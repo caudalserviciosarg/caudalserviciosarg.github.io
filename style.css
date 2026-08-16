@@ -1,4 +1,3 @@
-css
 /* ==================================================
    CONFIGURACIÓN GENERAL
 ================================================== */
@@ -20,9 +19,11 @@ body {
     color: #e9eef0;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Evita puntos y estilos de listas */
+
 ul,
 ol,
 li {
@@ -36,9 +37,11 @@ li::after {
     content: none !important;
 }
 
-/* Enlaces sin subrayados ni contenido agregado */
+/* Enlaces */
+
 a {
     text-decoration: none;
+    max-width: 100%;
 }
 
 a::before {
@@ -51,6 +54,7 @@ a::before {
 ================================================== */
 
 header {
+    width: 100%;
     background: linear-gradient(
         180deg,
         #080d10,
@@ -171,6 +175,7 @@ nav a:hover::after {
 ================================================== */
 
 .principal {
+    width: 100%;
     min-height: 650px;
 
     position: relative;
@@ -214,6 +219,7 @@ nav a:hover::after {
 ================================================== */
 
 .principal-contenido {
+    width: 100%;
     max-width: 850px;
 
     position: relative;
@@ -289,11 +295,12 @@ nav a:hover::after {
 ================================================== */
 
 .descripcion {
-    font-size: 19px;
-
+    width: 100%;
     max-width: 680px;
 
     margin: 0 auto 34px;
+
+    font-size: 19px;
 
     color: #cbd8dc;
 
@@ -444,7 +451,13 @@ nav a:hover::after {
 ================================================== */
 
 .boton-whatsapp {
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    max-width: 100%;
 
     background: #25D366;
 
@@ -454,18 +467,27 @@ nav a:hover::after {
 
     border-radius: 8px;
 
+    border: 2px solid #25D366;
+
     font-size: 17px;
     font-weight: bold;
+
+    text-align: center;
 
     box-shadow:
         0 7px 20px
         rgba(37, 211, 102, 0.2);
 
-    transition: 0.3s ease;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .boton-whatsapp:hover {
     background: #1ebe5d;
+
+    border-color: #1ebe5d;
 
     transform: translateY(-3px);
 
@@ -486,6 +508,8 @@ nav a:hover::after {
 ================================================== */
 
 .seccion {
+    width: 100%;
+
     padding: 85px 7%;
 
     text-align: center;
@@ -509,6 +533,7 @@ nav a:hover::after {
 }
 
 .texto-seccion {
+    width: 100%;
     max-width: 720px;
 
     margin: 0 auto 18px;
@@ -526,7 +551,10 @@ nav a:hover::after {
 ================================================== */
 
 .servicios {
-    margin-top: 45px;
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 45px auto 0;
 
     display: grid;
 
@@ -540,15 +568,13 @@ nav a:hover::after {
         );
 
     gap: 23px;
-
-    max-width: 1150px;
-
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .servicio {
     position: relative;
+
+    width: 100%;
+    min-width: 0;
 
     background:
         linear-gradient(
@@ -669,6 +695,8 @@ nav a:hover::after {
 ================================================== */
 
 .zona {
+    width: 100%;
+
     position: relative;
 
     overflow: hidden;
@@ -695,6 +723,7 @@ nav a:hover::after {
 }
 
 .zona-contenido {
+    width: 100%;
     max-width: 780px;
 
     margin: auto;
@@ -735,6 +764,7 @@ nav a:hover::after {
 }
 
 .matriculado {
+    width: 100%;
     max-width: 700px;
 
     margin: 40px auto 0;
@@ -788,6 +818,8 @@ nav a:hover::after {
 ================================================== */
 
 .contacto {
+    width: 100%;
+
     padding: 90px 20px;
 
     text-align: center;
@@ -842,6 +874,8 @@ nav a:hover::after {
 ================================================== */
 
 footer {
+    width: 100%;
+
     background: #050708;
 
     color: white;
@@ -861,6 +895,7 @@ footer {
 }
 
 .footer-contenido {
+    width: 100%;
     max-width: 800px;
 
     margin: auto;
@@ -908,6 +943,7 @@ footer .copyright {
 }
 
 footer .derechos {
+    width: 100%;
     max-width: 650px;
 
     margin: 12px auto 0;
@@ -933,6 +969,7 @@ footer .derechos {
     display: flex;
 
     align-items: center;
+    justify-content: center;
 
     gap: 8px;
 
@@ -943,6 +980,8 @@ footer .derechos {
     padding: 13px 19px;
 
     border-radius: 50px;
+
+    border: 2px solid #25D366;
 
     font-weight: bold;
 
@@ -955,10 +994,14 @@ footer .derechos {
     z-index: 9999;
 
     transition: 0.3s ease;
+
+    max-width: calc(100vw - 30px);
 }
 
 .whatsapp-flotante:hover {
     background: #1ebe5d;
+
+    border-color: #1ebe5d;
 
     transform: translateY(-4px);
 }
@@ -985,6 +1028,8 @@ footer .derechos {
     }
 
     header {
+        width: 100%;
+
         min-height: auto;
 
         flex-direction: column;
@@ -1030,6 +1075,8 @@ footer .derechos {
     }
 
     .principal {
+        width: 100%;
+
         min-height: 590px;
 
         padding:
@@ -1046,6 +1093,8 @@ footer .derechos {
     }
 
     .seccion {
+        width: 100%;
+
         padding:
             72px
             20px;
@@ -1056,12 +1105,16 @@ footer .derechos {
     }
 
     .servicios {
+        width: 100%;
+
         grid-template-columns: 1fr;
 
         max-width: 520px;
     }
 
     .zona {
+        width: 100%;
+
         padding:
             75px
             20px;
@@ -1072,6 +1125,8 @@ footer .derechos {
     }
 
     .contacto {
+        width: 100%;
+
         padding:
             78px
             20px;
@@ -1093,7 +1148,14 @@ footer .derechos {
         scroll-padding-top: 135px;
     }
 
+    body {
+        width: 100%;
+        max-width: 100%;
+    }
+
     header {
+        width: 100%;
+
         padding:
             5px
             12px
@@ -1103,6 +1165,8 @@ footer .derechos {
     }
 
     .logo {
+        width: 100%;
+
         height: 82px;
 
         justify-content: center;
@@ -1117,7 +1181,11 @@ footer .derechos {
     }
 
     nav {
+        width: 100%;
+
         gap: 12px;
+
+        flex-wrap: wrap;
     }
 
     nav a {
@@ -1125,11 +1193,18 @@ footer .derechos {
     }
 
     .principal {
+        width: 100%;
+
         min-height: 550px;
 
         padding:
             62px
-            20px;
+            16px;
+    }
+
+    .principal-contenido {
+        width: 100%;
+        max-width: 100%;
     }
 
     .principal h2 {
@@ -1138,107 +1213,226 @@ footer .derechos {
         line-height: 1.12;
 
         margin-bottom: 21px;
+
+        overflow-wrap: break-word;
     }
 
     .descripcion {
+        width: 100%;
+
+        max-width: 100%;
+
         font-size: 17px;
 
         line-height: 1.6;
 
         margin-bottom: 30px;
+
+        overflow-wrap: break-word;
     }
 
-    .boton-whatsapp {
-        width: 100%;
+    /* Botón principal corregido */
 
+    .boton-whatsapp {
+        display: flex;
+
+        width: 100%;
         max-width: 340px;
+
+        min-height: 52px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding:
+            13px
+            18px;
+
+        border:
+            2px solid
+            #25D366;
+
+        border-radius: 10px;
+
+        font-size: 16px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+        white-space: normal;
+
+        overflow: hidden;
+    }
+
+    .boton-whatsapp.grande {
+        width: 100%;
+        max-width: 340px;
+
+        padding:
+            15px
+            18px;
 
         font-size: 17px;
     }
 
     .seccion {
+        width: 100%;
+
         padding:
             65px
-            20px;
+            16px;
     }
 
     .seccion h2 {
         font-size: 32px;
+
+        overflow-wrap: break-word;
     }
 
     .texto-seccion {
+        width: 100%;
+
+        max-width: 100%;
+
         font-size: 16px;
+
+        overflow-wrap: break-word;
+    }
+
+    .servicios {
+        width: 100%;
+
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
     }
 
     .servicio {
+        width: 100%;
+
+        min-width: 0;
+
         padding:
             29px
             20px;
+
+        border-radius: 14px;
+
+        overflow: hidden;
     }
 
     .servicio h3 {
         font-size: 20px;
+
+        overflow-wrap: break-word;
     }
 
     .servicio p {
         font-size: 15px;
+
+        overflow-wrap: break-word;
     }
 
     .zona {
+        width: 100%;
+
         padding:
             68px
-            20px;
+            16px;
+    }
+
+    .zona-contenido {
+        width: 100%;
+        max-width: 100%;
     }
 
     .zona h2 {
         font-size: 32px;
+
+        overflow-wrap: break-word;
     }
 
     .zona p {
         font-size: 17px;
+
+        overflow-wrap: break-word;
     }
 
     .matriculado {
+        width: 100%;
+
+        max-width: 100%;
+
         padding:
             25px
             21px;
+
+        overflow: hidden;
     }
 
     .matriculado h3 {
         font-size: 21px;
+
+        overflow-wrap: break-word;
     }
 
     .matriculado p {
         font-size: 15px;
+
+        overflow-wrap: break-word;
     }
 
     .contacto {
+        width: 100%;
+
         padding:
             72px
-            20px;
+            16px;
     }
 
     .contacto h2 {
         font-size: 32px;
+
+        overflow-wrap: break-word;
     }
 
     .contacto > p:not(.etiqueta) {
         font-size: 17px;
+
+        overflow-wrap: break-word;
     }
 
+    /* Botón flotante corregido */
+
     .whatsapp-flotante {
-        right: 15px;
+        right: 12px;
+        bottom: 12px;
 
-        bottom: 15px;
+        width: 54px;
+        height: 54px;
 
-        width: 55px;
-        height: 55px;
+        min-width: 54px;
+        max-width: 54px;
 
         padding: 0;
 
-        justify-content: center;
+        border:
+            2px solid
+            #25D366;
 
-        font-size: 25px;
+        border-radius: 50%;
+
+        justify-content: center;
+        align-items: center;
+
+        font-size: 24px;
+
+        line-height: 1;
+
+        overflow: hidden;
     }
 
     .whatsapp-flotante span {
@@ -1275,10 +1469,21 @@ footer .derechos {
 
     .principal {
         min-height: 530px;
+
+        padding:
+            58px
+            14px;
     }
 
     .principal h2 {
         font-size: 34px;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .descripcion {
+        font-size: 16px;
     }
 
     .etiqueta {
@@ -1290,7 +1495,13 @@ footer .derechos {
     .servicio {
         padding:
             28px
-            20px;
+            18px;
+    }
+
+    .matriculado {
+        padding:
+            23px
+            18px;
     }
 
     footer {
@@ -1298,6 +1509,17 @@ footer .derechos {
             38px
             18px
             25px;
+    }
+
+    .whatsapp-flotante {
+        right: 10px;
+        bottom: 10px;
+
+        width: 52px;
+        height: 52px;
+
+        min-width: 52px;
+        max-width: 52px;
     }
 }
 
@@ -1326,12 +1548,70 @@ footer .derechos {
         font-size: 10px;
     }
 
+    .principal {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
     .principal h2 {
         font-size: 30px;
     }
 
     .descripcion {
         font-size: 16px;
+    }
+
+    .boton-whatsapp,
+    .boton-whatsapp.grande {
+        max-width: 300px;
+
+        font-size: 15px;
+
+        padding:
+            12px
+            14px;
+    }
+
+    .whatsapp-flotante {
+        right: 8px;
+        bottom: 8px;
+
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+        max-width: 50px;
+    }
+}
+
+
+/* ==================================================
+   SEGURIDAD EXTRA PARA CELULARES
+================================================== */
+
+@media (max-width: 600px) {
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    section,
+    main,
+    header,
+    footer,
+    div {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    span {
+        max-width: 100%;
     }
 }
 
